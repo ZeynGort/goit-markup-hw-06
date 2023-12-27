@@ -110,7 +110,12 @@
                     type="checkbox"
                     name="policy"
                   />
-                  <span class="check"></span>
+                  <svg class="check on" width="16" height="16">
+                    <use href="./images/icons.svg#icon-check"></use>
+                  </svg>
+                  <svg class="check off" width="16" height="16">
+                    <use href="./images/icons.svg#vector-no-check"></use>
+                  </svg>
                   Погоджуюся з розсилкою та приймаю
                   <a href="#">Умови договору</a>
                 </label>
@@ -509,13 +514,10 @@
             </li>
           </ul>
         </div>
-
         <form class="footer-form">
           <p class="footer-form-h">Підпишіться на розсилку</p>
           <div class="em-sub-box">
-            <label>
-              <input type="email" name="email" placeholder="E-mail" />
-            </label>
+            <input type="email" name="email" placeholder="E-mail" />
             <button class="subscribe" type="button">
               Підписатися
               <svg class="icon-sub-box" width="24" height="24">

@@ -273,6 +273,14 @@ header {
   background-color: transparent;
   cursor: pointer;
 }
+.close svg {
+  fill: #000;
+  transition: fill 250ms var(--timing-function);
+}
+.close:hover svg,
+.close:focus svg {
+  fill: var(--selection-color);
+}
 
 .form {
   padding: 40px;
@@ -356,18 +364,26 @@ header {
 }
 
 .check {
-  width: 16px;
-  height: 16px;
   position: absolute;
   margin-left: -24px;
   top: 50%;
   transform: translate(0, -50%);
-  background-image: url(../images/vector-no-check.svg);
-  background-size: contain;
-  transition: background-image 250ms var(--timing-function);
 }
-.checkbox input:checked + .check {
-  background-image: url(../images/icon-check.svg);
+.check.on {
+  opacity: 0;
+}
+.check.off {
+  opacity: 1;
+}
+.checkbox input:checked + .check.on {
+  opacity: 1;
+}
+.checkbox input:checked ~ .check.off {
+  opacity: 0;
+}
+.checkbox input:focus ~ .check.off,
+.checkbox input:hover ~ .check.off {
+  fill: var(--selection-color);
 }
 
 .checkbox label {
