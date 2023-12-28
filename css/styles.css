@@ -375,14 +375,14 @@ header {
 .check.off {
   opacity: 1;
 }
-.checkbox input:checked + .check.on {
+.checkbox input:checked + .on {
   opacity: 1;
 }
-.checkbox input:checked ~ .check.off {
+.checkbox input:checked ~ .off {
   opacity: 0;
 }
-.checkbox input:focus ~ .check.off,
-.checkbox input:hover ~ .check.off {
+.checkbox input:focus ~ .off,
+.checkbox input:hover ~ .off {
   fill: var(--selection-color);
 }
 
